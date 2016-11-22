@@ -18,20 +18,33 @@ console.log(typeof myNum); */
 var myScore; 
 
 // Setup and change the game score 
-changeScore();
-init(); 
+init(1000); 
+changeScore(100);
+changeScore(50);
+changeScore(-250);
+changeScore(125); 
 
-function init(){
 
-	myScore = 7000;
+// Function to initialize the game score 
+function init(newScore){
 
+	myScore = newScore;
+	displayScore();
+	console.log("Setting the score to " + newScore);
 }
 
-function changeScore(){
+// Function to change the score of the game 
+function changeScore(scoreDelta){   //Delta represents change in value
 
-	myScore = myScore + 7000; 
+	myScore = myScore + scoreDelta; 
+	displayScore();
 	console.log("Loretta's score:" + myScore); 
-
 }
 
-console.log(changeScore);
+function displayScore()
+{
+	console.log("Player score:" + myScore); //print "Player score:#" 
+}
+
+console.log(init); 
+console.log("Loretta's score:" + myScore); //print "Loretta's score:#"
