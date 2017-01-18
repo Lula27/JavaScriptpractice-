@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Java Script Recap</title>
+</head>
+<body>
+	<h1 id="our-headline"><strong>Click a list item to replace this text!</strong></h1>
+
+	<!-- Button div -->
+	<div class="button">
+		<button type="button" id="add" class="btn btn-danger">Add new item</button>
+	</div>
+
+	<div class="list">
+		<ul id="our-list">
+			<li>First item</li>
+			<li>Second item</li>
+			<li>Third item</li>
+			<li>Fourth item</li>
+			<li>Fifth item</li>
+		</ul>
+	</div>
+
+
+
+	<script type="text/javascript">
+		// Increment something new
+		var newItemCounter = 1; 
+		// select elements from unordered list
+		var ourList = document.getElementById("our-list");
+
+		// Create variable to select button 
+		var ourButton = document.getElementById("add");
+
+		// Create variable to select headline element
+		var ourHeadline = document.getElementById("our-headline"); 
+
+		// Add CSS class to element: create in CSS file-Beige highligt for item
+		//  this.classList.add("activate"); 
+
+		// Remove class from element
+		// listItems[i].classList.remove("active"); 
+
+
+		// Get list items to respond with click 
+
+		// create variable to select list items (select multiple elements): document.getElementsByClassName
+
+		var listItems = document.getElementById("our-list").getElementsByTagName("li"); 
+
+
+	
+		ourList.addEventListener("click", activateItem); 
+
+		function activateItem (e) {
+
+			if (e.target.nodeName == "LI") {
+				ourHeadline.innerHTML = e.target.innerHTML; 
+					// Loop through and add method to make it aware of incoming clicks
+				for (i = 0; i < e.target.parentNode.children.length; i++) {
+				e.target.parentNode.children[i].addEventListener("click", activateItem); 
+				}
+			}
+
+		}
+		/*this keyword will be referenced to element that was clicked*/
+
+
+		// Get button to respond and add new item when clicked
+		ourButton.addEventListener("click", createNewItem);
+
+		function createNewItem() {
+			ourList.innerHTML += "<li>Something new " + newItemCounter + "</li>"; 
+				newItemCounter++;
+		}
+
+
+		// Problem: Event delegation @25 -experiencing the same problem with button generator; why I can't get the newly generated buttons to be responsive
+
+
+
+	</script>
+</body>
+</html>
