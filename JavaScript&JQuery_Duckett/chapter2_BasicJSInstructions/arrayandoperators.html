@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays&Opperators</title>
+</head>
+<body>
+
+	<div id='colors'>Array Literal Color: </div>
+	<div id='ccolors'>Array Constructor Color: </div>
+	<Br>
+	<div id='costinfo' style="text-align: center;">
+		<div id='subtotal'></div>
+		<div id='shipping'></div>
+		<div id='grandtotal'></div>
+	</div>
+
+
+
+<script type="text/javascript">
+	// Array Literal 
+	var colors = ['white', 'black', 'custom'];
+
+	console.log(colors); 
+
+	var el = document.getElementById('colors'); 
+	el.textContent = colors[0]; 
+
+
+	// Array Constructor 
+	var concolor = new Array('white',
+							  'black',
+							   'custom');
+
+	var el = document.getElementById('ccolors');
+	el.textContent = concolor[1]; 
+
+
+	// Cost Info Calculations
+	var subtotal = (13 + 1) * 5; 
+	console.log(subtotal); 
+	var shipping = 0.5 * (13 + 1); 
+
+	var total = subtotal + shipping; 
+	console.log(total); 
+
+	var elSub = document.getElementById('subtotal');
+	elSub.textContent = 'Subtotal: ' + subtotal;  
+
+	var elShip = document.getElementById('shipping');
+	elShip.textContent = 'Shipping: ' + shipping;  
+
+	var elGrand = document.getElementById('grandtotal');
+	elGrand.textContent = 'Total: ' + total;  
+
+
+</script>
+</body>
+</html>

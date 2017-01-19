@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Values</title>
+</head>
+<body>
+	<h1 style="text-align: center">Storing Different Values!</h1>
+	<h2>Using variable to store a number</h2>
+		<h3>Elderflower</h3>
+		<div id="content">
+			<h4>Custom Signage</h4>
+			<div id="cost">Cost: $5 per tile</div>
+	</div>
+
+	
+		<h5>Using variable to store a string</h5>
+		<div id="content">
+			<div id="title">Howdy 
+				<span id="name">friend</span>!</div>
+			<div id="note">Take a look around...</div>
+		</div>
+	
+		<h5>Using quotes inside a string</h5>
+		<div id="content">
+			<div id="titles">Special Offers</div>
+			<div id="notes">Sign-up to receive personalized offers!</div>
+		</div>
+		<Br>
+		<div id="content">
+			<div class="message">Available:  
+				<span id="stock"></span></div> 
+			<div class="message">Shipping:
+				<span id="shipping"></span></div>
+		</div>
+	
+	
+
+<script type="text/javascript">
+// Storing variable as Number 
+	var price = 5;
+	var quantity = 14;
+	var total = price * quantity; 
+
+var el = document.getElementById('cost');
+el.textContent = '$' + total; 
+
+
+// Storing variable as String
+	var username = 'Molly'; 
+	var message = 'See our upcoming range';
+
+	var elName = document.getElementById('name');
+	elName.textContent = username; 
+	var elNote = document.getElementById('note'); 
+	elNote.textContent = message;  
+
+
+// Using Quotes inside a string
+var title = "Molly's Special Offers";
+var message = '<a href=\"google.com"\">25% off!</a>'; 
+
+var elTitle = document.getElementById('titles'); 
+elTitle.innerHTML = title; 
+var elNote = document.getElementById('notes');
+elNote.innerHTML = message; 
+
+// Using a variable to store a Boolean: Redo!!!
+var inStock = true; 
+var shipping = false; 
+
+var elStock = document.getElementById('stock');
+elStock.className = inStock;
+
+var elShip = document.getElementById('shipping');
+elShip.className = shipping; 
+
+</script>
+</body>
+</html>
