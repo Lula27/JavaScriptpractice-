@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript &amp; jQuery - Chapter 2: Basic JavaScript Instructions - Example</title>
+</head>
+	<body>
+	<h1>Elderflower</h1>
+		<div id="content">
+			<div id="greeting" class="message">Hello!</div>
+			<table>
+				<tr>
+					<td>Custom sign: </td>
+					<td id="userSign"></td>
+				</tr>
+				<tr>
+					<td>Total tiles: </td>
+					<td id="tiles"></td>
+				</tr>
+				<tr>
+					<td>Subtotal: </td>
+					<td id="subTotal">$</td>	
+				</tr>
+				<tr>
+					<td>Shipping: </td>
+					<td id="shipping">$</td>
+				</tr>
+				<tr>
+					<td>Grand total: </td>
+					<td id="grandTotal">$</td>
+				</tr>
+			</table>
+			<a href="#" class="action">Pay Now</a>
+		</div>
+
+	<script type="text/javascript">
+		// Create variable for welcome message 
+		var greeting = 'Howdy '; 
+		var name = ' Molly';
+		var message = ', please check your order:'; 
+		// Concatenate the three variables above to create the welcome message 
+		var welcome = greeting + name + message; 
+
+		// Create variables to hold details about the sign
+		var sign = 'Montague House';
+		var tiles = sign.length; /*number of characters in sign*/
+		// console.log(tiles); = 14
+		var subTotal = tiles * 5
+		// console.log(subTotal); = 70
+		var shipping = 7;
+		var grandTotal = subTotal + shipping; 
+
+		// Get element that has an id of greeting 
+		var el = document.getElementById('greeting'); 
+		// Replace content of element with personalized welcome message
+		el.textContent = welcome; 
+
+		// Get element that has id of userSign then update its contents
+		var elSign = document.getElementById('userSign'); 
+		elSign.textContent = sign; 
+
+		// Get element with id of tiles then update its contents
+		var elTiles = document.getElementById('tiles');
+		elTiles.textContent = tiles; 
+
+		// Get element w/ id of subTotal then update its contents
+		elSubTotal = document.getElementById('subTotal');
+		elSubTotal.textContent = '$'+ subTotal; 
+
+		// Get element w/ id of shipping then update its contents
+		elShipping = document.getElementById('shipping');
+		elShipping.textContent = '$' + shipping; 
+
+		// Get element w/ id of grandTotal and update its contents 
+		var elgrandTotal = document.getElementById('grandTotal');
+		elgrandTotal.textContent = '$' + grandTotal; 
+
+	</script>
+	</body>
+</html>
