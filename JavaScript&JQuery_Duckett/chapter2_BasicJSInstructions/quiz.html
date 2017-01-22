@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Quiz</title>
+</head>
+
+<body>
+	<h1><strong>Elderflower</strong></h1>
+
+	<!-- Creating a page to store cost of sign length. -->
+	<div id='greet'></div>
+
+	<table>
+		<tr>
+		<br>
+			<td id='sign'>Custom sign:</td>
+		</tr>
+		<tr>
+			<td id='tiles'>Total tiles:</td>
+		</tr>
+		<tr>
+			<td id='stotal'>Subtotal:</td>
+		</tr>
+		<tr>
+			<td id='ship'>Shipping:</td>
+		</tr>
+		<tr>
+			<td id='gtotal'>Grand total:</td>	
+		</tr>
+	</table>
+
+		<p><a href='#'>Pay Now</a></p>
+
+	<script type='text/javascript'>
+		// Create variables to store string variables 
+		var name = 'Loretta'; 
+		var greeting = "Hey " + name + ", welcome back!"; 
+		// console.log(greeting); 
+		var hotel = "Montague House";
+
+		// variables to store number variables 
+		var tiles = hotel.length;
+		// console.log(tiles);
+		var subtotal = tiles*5; 
+		// console.log(subtotal);
+		var shipping = 7;
+		var grandtotal = subtotal + shipping; 
+		// console.log(grandtotal); 
+
+
+		// Print on Page!
+		var elSign = document.getElementById('sign');
+		elSign.textContent = 'Custom sign: ' + hotel;
+
+		var elGreeting = document.getElementById('greet'); 
+		elGreeting.textContent = greeting; 
+
+		var elTcount = document.getElementById('tiles');
+		elTcount.textContent = "Total tiles: " + tiles; 
+
+		var elSubtotal = document.getElementById('stotal');
+		elSubtotal.textContent = "Subtotal: " + '$'+ subtotal; 
+
+		var elShipping = document.getElementById('ship');
+		elShipping.textContent = "Shipping: " + '$' + shipping; 
+
+		var elGrandtotal = document.getElementById('gtotal');
+		elGrandtotal.textContent = "Grand total: " + '$' + grandtotal; 
+
+
+	</script>
+</body>
+</html>
