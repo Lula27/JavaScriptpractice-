@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+</head>
+<body>
+	
+	<h1>Storing Data in JavaScript</h1>
+	<p>In JS, data is representing using name/value pairs. Data can be stored using variables, arrays, individual objects and multiple objects.</p>
+
+
+	
+	<script type="text/javascript">
+		
+	// I. Variables = one key(name) and one value
+		 var hotel = 'Quay';
+		 hotel; /*retrieves Quay*/
+
+
+	// II. Arrays <- useful for when order is important 
+	var hotels = [
+		'Quay',
+		'Park',
+		'Beach',
+		'Bloomsbury'
+		]
+
+		hotels[1]; /*retrieves Park*/
+
+
+	// Use objects if you want to access items via property name/key 
+
+	// III. Individual Objects (object literal notation-curly)
+
+		var hotel = {
+			name: 'Quay',
+			rooms: 40
+		}; 
+
+		hotel.name; /*retrieves Quay*/
+
+
+	// IV. Multiple Objects (object constructor)-create multiple objects within same page
+		function Hotel (name, rooms) {
+			this.name = name;
+			this.rooms = rooms; 
+		}
+
+		// Instances of object
+		var hotel1 = new Hotel('Quay', 40);
+		var hotel2 = new Hotel('W', 70); 
+
+		hotel2.name /*retreives W */ 
+		
+
+
+
+
+
+
+	</script>
+	
+
+
+
+
+	
+</body>
+</html>
