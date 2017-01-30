@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Browser Object Model</title>
+</head>
+<body>
+	<h1 style="text-align: center">The Browser Object Model: The Window Object</h1>
+	<p>The window object represents the current browser window or tab. It is the topmost object in the Browser Object Model, and it contains other objects that tell you about the browser.</p>
+
+	<p>Properties of document object give info about current page!</p>
+	<br>
+	<table style="width: 70%">
+		<tr>
+			<th>Property</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>window.innerHeight = height of window</td>
+			<td id="wh" style="text-align: center;">window.innerHeight</td>
+		</tr>
+		<tr>
+			<td>window.innerWidth = width of window</td>
+			<td id="wi" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.pageXOffset = distance document has been scrolled horizontally (in pixels)</td>
+			<td id="pxo" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.pageYOffset = distance document has been scrolled vertically (in pixels)</td>
+			<td id="pyo" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.screenX = X-coordinate of pointer, relative to top left corner of screen (in pixels)</td>
+			<td id="sx" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.screenY = Y-coordinate of pointer, relative to top left corner of screen (in pixels)</td>
+			<td id="sy" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.location = current URL of window objecct (or local file path)</td>
+			<td id="wl" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.document = reference to document object, which is used to represent the current page contained in window</td>
+			<td id="wd" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.history = reference to history object for browser window/tab, which contains details of the pages that have been viewed in that window or tab</td>
+			<td id="whi" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.history.length = number of items in history object for browser window or tab</td>
+			<td id="whil" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.screen = reference to screen object</td>
+			<td id="ws" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.screen.width = accesses screen object and finds value of its width property (in pixels)</td>
+			<td id="wsw" style="text-align: center;"></td>		
+		</tr>
+		<tr>
+			<td>window.screen.height = accesses screen object and finds value of its height property (in pixels)</td>
+			<td id="wsh" style="text-align: center;"></td>		
+		</tr>
+
+	</table>
+
+	<br>
+
+	<table style="width: 50%">
+			<th>Method</th>
+			<th>Description</th>
+		<tr>
+			<td>window.alert()</td>
+			<td id="wa" style="text-align: center;">creates dialog box with message</td>		
+		</tr>
+		<tr>
+			<td>window.open()</td>
+			<td id="wo" style="text-align: center;">opens new browser window with URL specified as parameter</td>		
+		</tr>
+		<tr>
+			<td>window.print()</td>
+			<td id="wp" style="text-align: center;">Tells browser that user wants to print contents of current page</td>		
+		</tr>
+	</table>
+
+
+	<h2>Using the Browser Object Model</h2>
+	<div id="info"></div>
+
+	<script type="text/javascript">
+		
+		var msg = '<h3>browser window</h3><p>width: ' + window.innerWidth + '</p>'; 
+		msg += '<p>height: ' + window.innerHeight + '</p>';
+		msg += '<h3>history</h2><p>width: ' + window.history.length + '</p>';
+		msg += '<h3>screen</h3><p>width: ' + window.screen.width + '</p>';
+		msg += '<p> height: ' + window.screen.height + '</p>';
+		var el = document.getElementById('info');
+		el.innerHTML = msg;
+		// alert('Current page:' + window.location); 
+
+		// Fill table with info!
+
+		var info1 = window.innerHeight;
+		var elinfo1 = document.getElementById('wh');
+		elinfo1.innerHTML = info1; 
+
+		var width = window.innerWidth; 
+		var elwidth = document.getElementById('wi');
+		elwidth.innerHTML = width; 
+
+		var pxo = window.pageXOffset;
+		var elpxo = document.getElementById('pxo');
+		elpxo.innerHTML = pxo; 
+
+		var pyo = window.pageYOffset;
+		var elpyo = document.getElementById('pyo');
+		elpyo.innerHTML = pyo; 
+
+		var screenx = window.screenx;
+		var elscreenx = document.getElementById('sx');
+		elscreenx.innerHTML = screenx; 
+
+
+		var screeny = window.screeny;
+		var elscreeny = document.getElementById('sy');
+		elscreeny.innerHTML = screeny; 
+
+		// var wloc = window.location;
+		// var elwloc = document.getElementById('wl');
+		// elwloc.innerHTML = wloc; 
+
+
+		var wdoc = window.document;
+		var elwdoc = document.getElementById('wd');
+		elwdoc.innerHTML = wdoc; 
+
+
+		var whis = window.history;
+		var elwhis = document.getElementById('whi');
+		elwhis.innerHTML = whis; 
+
+		var whislen = window.history.length;
+		var elwhislen = document.getElementById('whil');
+		elwhislen.innerHTML = whislen; 
+
+		var winscreen = window.screen;
+		var elwinscreen = document.getElementById('ws');
+		elwinscreen.innerHTML = winscreen; 
+
+		var winscreenwi = window.screen.width;
+		var elwinscreenwi = document.getElementById('wsw');
+		elwinscreenwi.innerHTML = winscreenwi; 
+
+		var winscreenhi = window.screen.height;
+		var elwinscreenhi = document.getElementById('wsh');
+		elwinscreenhi.innerHTML = winscreenhi; 
+
+
+		// Methods: 
+
+		// window.alert("Hi!"); 
+		// window.open('https://www.youtube.com/watch?v=KCY4UW3dBrs&ab_channel=Daniel'); 
+		// window.print();
+
+
+
+	</script>
+	
+
+</body>
+</html>
