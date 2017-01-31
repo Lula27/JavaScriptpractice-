@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Objected</title>
+</head>
+<body>
+	<h1>Global Objects: String Objects</h1>
+	
+	<p>details on pg 128</p>
+	<p>String object is known as a <strong>global object</strong> because it works anywhere within your script, and a <strong> wrapper object</strong>because it acts like a wrapper around any value that is a string-you can use this object's properties and methods on any value that is a string.</p>
+
+	<h2 id="text"></h2>
+
+	<div id='length'></div>
+
+	<br>
+
+	<table style='width: 50%'>
+		<tr>
+			<th>Method</th>
+			<th>Example</th>
+		</tr>
+		<tr>
+			<td>toUpperCase()</td>
+			<td id="uc"></td>
+		</tr>
+		<tr>
+			<td>toLowerCase()</td>
+			<td id="lc"></td>
+		</tr>
+		<tr>
+			<td>charAt()</td>
+			<td id="ch"></td>
+		</tr>
+		<tr>
+			<td>indexOf()</td>
+			<td id="in"></td>
+		</tr>
+		<tr>
+			<td>lastIndexOf()</td>
+			<td id="lin"></td>
+		</tr>
+		<tr>
+			<td>substring()</td>
+			<td id="sub"></td>
+		</tr>
+		<tr>
+			<td>split()</td>
+			<td id="sp"></td>
+		</tr>
+		<tr>
+			<td>trim()</td>
+			<td id="tr"></td>
+		</tr>
+		<tr>
+			<td>replace()</td>
+			<td id="rep"></td>
+		</tr>
+
+
+
+
+
+	</table>
+
+
+
+	<script type="text/javascript">
+		
+		var saying = 'Home sweet home ';
+
+		var elSaying = document.getElementById('text');
+		elSaying.innerHTML = saying; 
+
+		// Get length of characters 
+
+		var len = saying.length;
+
+		var elLen = document.getElementById('length');
+
+		elLen.innerHTML = 'Number of characters in string: ' + len; 
+
+		// Change all letters to upper case 
+
+		var upper = saying.toUpperCase();
+
+		var elUpper = document.getElementById('uc');
+
+		elUpper.innerHTML = upper; 
+
+
+		// Change all letters to lower case 
+
+		var lower = saying.toLowerCase();
+
+		var elLower = document.getElementById('lc');
+
+		elLower.innerHTML = lower;
+
+
+		// take index number as parameter and return character found at that position
+
+		var cindex = saying.charAt(6);
+
+		var elCindex = document.getElementById('ch');
+
+		elCindex.innerHTML = cindex; 
+
+
+		// Return index # of first time a character/set of characters is found w/in a string
+
+		var flindex = saying.indexOf('sw');
+
+		var elFlindex = document.getElementById('in');
+
+		elFlindex.innerHTML = flindex; 
+
+		// Return index number of the last time a character/set of characters is found w/in a string 
+
+		var lindex = saying.lastIndexOf('o')
+
+		var elLindex = document.getElementById('lin');
+
+		elLindex.innerHTML = lindex; 
+
+
+		// Return character found btw two index #s where character for the first index # is included
+		// and character for the last index # is not included
+
+		var between = saying.substring(7, 12);
+
+		var elBetween = document.getElementById('sub');
+
+		elBetween.innerHTML = between; 
+
+
+		// Splits string each time it is found and stores each individual part in array
+		// when character is specified 
+
+		var split = saying.split('');
+
+		var elSplit = document.getElementById('sp');
+
+		elSplit.innerHTML = split; 
+
+		console.log(split);
+
+
+		// Removes white spaces from start and end of string
+
+		var trim = saying.trim();
+
+		var elTrim = document.getElementById('tr');
+
+		elTrim.innerHTML = trim; 
+
+
+		// Like find and replace- takes one value that should be found, and another to replace it
+		// By default, only replaces the first match it finds
+
+		var replace = saying.replace('sw', 'te'); 
+
+		var elReplace = document.getElementById('rep');
+
+		elReplace.innerHTML = replace; 
+
+
+
+
+
+
+		
+
+
+
+
+	</script>
+
+</body>
+</html>
