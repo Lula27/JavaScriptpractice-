@@ -78,6 +78,8 @@
 		</tr>
 	</table>
 
+	<h3 id="info">Randomly Generated Number</h3>
+
 
 	<script type="text/javascript">
 		
@@ -189,6 +191,26 @@
 		var elRanNum = document.getElementById('ran');
 
 		elRanNum.innerHTML = ranNum; 
+
+
+		// Math Object to Create Random Numbers
+
+		// var randomnum = Math.random(); /*generates a random value > 0 but < 1 */ 
+
+
+			/*moves decimal point one value to right making the decimal value an integer*/
+			// randomnum += Math.random() * 10; 
+
+
+			// randomnum += (Math.random() * 10) + 1; /* add one more decimal place-allows number to be greater than 10 : 1 < value < 20 */
+			
+			/*rounds number down - whole number bigger than 0 but never greater than 10 */
+		var randomnum = Math.floor((Math.random() * 10) + 1); 							
+		
+
+		var elRandomnum = document.getElementById('info');
+
+		elRandomnum.innerHTML = 'Randomly Generated Number: ' + randomnum; 
 
 
 	</script>
