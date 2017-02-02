@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date Object</title>
+</head>
+<body>
+	<h1 style="text-align: center;">Global Objects: Date Object (And Time)</h1>
+
+	<p>To use dates, create an instance of the Date object. <br> Specify the time and date you want to represent. <br>
+	In JavaScript, dates are stored as numbers: number of milliseconds since mindnight on January 1, 1970. <br>
+	Date & time determined by computer clock. Dependent on your internal clock being correct and where (what time zone) a user is in!</p>
+
+
+	<table style="width: 70%" border="2">
+		<tr>
+			<th>METHOD</th>
+			<th>DESCRIPTION</th>
+			<th>EXAMPLE</th>
+		</tr>
+		<tr>
+			<td>getDate() / setDate()</td>
+			<td>Returns/sets day of the month (1-31)</td>
+			<td id="date">1</td>
+		</tr>
+		<tr>
+			<td>toDateString()</td>
+			<td>Returns "date" as a human-readable string</td>
+			<td id="datest">2</td>
+		</tr>
+		<tr>
+			<td>toString()</td>
+			<td>Returns string representing the specified date</td>
+			<td id="tostr">3</td>
+		</tr>
+		<tr>
+			<td>getTimezoneOffset()</td>
+			<td>Returns time zone offset in mins for locale</td>
+			<td id="timezo">4</td>
+		</tr>
+		<tr>
+			<td>getTime() / setTime()</td>
+			<td>Returns number of millisecs. since 1/1/1970, 00:00:00 UTC (Coordinated Universal Time) and a negative number for any time before.</td>
+			<td id="time">5</td>
+		</tr>
+		<tr>
+			<td>toTimeString()</td>
+			<td>Returns "time" as a human-readable string</td>
+			<td id="timestr">6</td>
+		</tr>
+		<tr>
+			<td>getFullYear() / setFullYear()</td>
+			<td>Returns / sets the year (4 digits)</td>
+			<td id="yr">7</td>
+		</tr>
+		<tr>
+			<td>getMonths() / setMonths()</td>
+			<td>Returns / sets the months(0-11)</td>
+			<td id="mon">8</td>
+		</tr>
+		<tr>
+			<td>getDay()</td>
+			<td>Returns the day of the week (0-6)</td>
+			<td id="day">9</td>
+		</tr>
+		<tr>
+			<td>getHours() / setHours()</td>
+			<td>Returns / sets the hour (0-23)</td>
+			<td id="hr">10</td>
+		</tr>
+		<tr>
+			<td>getMinutes() / setMinutes()</td>
+			<td>Returns / sets the minutes (0-59)</td>
+			<td id="mins">11</td>
+		</tr>		
+		<tr>
+			<td>getSeconds() / setSeconds()</td>
+			<td>Returns / sets the seconds(0-59)</td>
+			<td id="sec">12</td>
+		</tr>
+		<tr>
+			<td>getMilliseconds() / setMilliseconds()</td>
+			<td>Returns / sets the milliseconds (0-999)</td>
+			<td id="ms">13</td>
+		</tr>	
+		
+	</table>
+
+	<div id="footer"></div>
+
+	<script type="text/javascript">
+		
+		// create date object 
+		var today = new Date();
+
+		var year = today.getFullYear();
+
+		var el = document.getElementById('footer');
+		el.innerHTML = '<p>Copyright &#169; ' + year + '</p>'; 
+	</script>
+
+</body>
+</html>
