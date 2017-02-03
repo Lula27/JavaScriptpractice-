@@ -53,8 +53,8 @@
 			<td id="yr">7</td>
 		</tr>
 		<tr>
-			<td>getMonths() / setMonths()</td>
-			<td>Returns / sets the months(0-11)</td>
+			<td>getMonth() / setMonth()</td>
+			<td>Returns / sets the month(0-11)</td>
 			<td id="mon">8</td>
 		</tr>
 		<tr>
@@ -95,7 +95,134 @@
 		var year = today.getFullYear();
 
 		var el = document.getElementById('footer');
-		el.innerHTML = '<p>Copyright &#169; ' + year + '</p>'; 
+		el.innerHTML = '<p>Copyright &#169; ' + year + '</p>';
+
+
+	// Date Object (And Time)
+	var today = new Date(); 
+
+	// console.log(today);
+
+	// Need to establish date before you can use method to retrieve it 
+
+	var date = today.getDate(); 
+
+	// console.log(date); 
+
+	var elDate = document.getElementById('date');
+
+	elDate.innerHTML = date; 
+
+
+	// Return date in more readable string form 
+
+	var dastr = today.toDateString(); 
+
+	var elDastr = document.getElementById('datest'); 
+
+	elDastr.innerHTML = dastr; 
+
+
+	// String representing specified date 
+
+	var str = today.toString();
+
+	var elStr = document.getElementById('tostr');
+
+	elStr.innerHTML = str; 
+
+
+	// Return time zone offset (in mins)
+
+	var tz = today.getTimezoneOffset();
+
+	var elTz = document.getElementById('timezo');
+
+	elTz.innerHTML = tz + ' mins'; 
+
+
+	// Return number of millisecs since 1/1/1970
+
+	var diffmilli = today.getTime();
+
+	var elDiffmilli = document.getElementById('time');
+
+	elDiffmilli.innerHTML = diffmilli + ' milliseconds'; 
+
+
+	// Transform time format into a readable string
+
+	var time = today.toTimeString();
+
+	var elTime = document.getElementById('timestr');
+
+	elTime.innerHTML = time; 
+
+
+	// Retreive full year
+
+	var year = today.getFullYear();
+
+	var elYear = document.getElementById('yr');
+
+	elYear.innerHTML = year; 
+
+
+	// Retreive month number
+
+	var month = today.getMonth();
+
+	var elMonth = document.getElementById('mon'); 
+
+	elMonth.innerHTML = month; 
+
+
+	// Retreive day of the week 
+
+	var daywk = today.getDay();
+
+	var elDaywk = document.getElementById('day');
+
+	elDaywk.innerHTML = daywk; 
+
+
+	// Retreive hour 
+
+	var hour = today.getHours();
+
+	var elHour = document.getElementById('hr');
+
+	elHour.innerHTML = hour; 
+
+
+	// Retreive minutes 
+
+	var minutes = today.getMinutes();
+
+	var elMinutes = document.getElementById('mins');
+
+	elMinutes.innerHTML = minutes; 
+
+
+	// Retreive seconds 
+
+	var seconds = today.getSeconds();
+
+	var elSeconds = document.getElementById('sec'); 
+
+	elSeconds.innerHTML = seconds; 
+
+
+	// Retreive milliseconds 
+
+	var millisecs = today.getMilliseconds();
+
+	var elMillisecs = document.getElementById('ms');
+
+	elMillisecs.innerHTML = millisecs; 
+
+
+
 	</script>
 
 </body>
