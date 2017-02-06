@@ -1,0 +1,56 @@
+<!-- Design a planner: provide information about today's date and time and when you'd like to complete certain tasks by their dates. 
+How long will it take to accomplish those tasks? -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Planner</title>
+</head>
+<body>
+	<h1 style="text-align: center;"><strong>My Planner</strong></h1>
+
+
+	<div id="message"></div>
+
+
+	<script type="text/javascript">
+
+
+	// Establish date as today
+		var today = new Date(); 
+
+		console.log(today); 
+
+
+	// Create variables 
+
+		var name = {
+			'Lula',
+			 'Loretta', 
+			 'Abena'}; 
+
+		console.log(name[0]); 
+
+	
+	// Print date details
+
+		var msg = 'Hello ' + name[2] + ' enjoy your day!';
+
+		var elMsg = document.getElementById('message');
+
+		elMsg.innerHTML = msg; 
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
