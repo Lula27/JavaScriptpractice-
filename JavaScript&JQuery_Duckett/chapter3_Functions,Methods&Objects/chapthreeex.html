@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+</head>
+<body>
+
+	<!-- Div ids -->
+	<div id="hotelName"></div>
+	<div id="roomRate"></div>
+	<div id="specialRate"></div>
+	<div id=""></div>
+
+	<script type="text/javascript">
+		/* Script placed inside an immediately invoked funtion expression that helps protect scope of variables*/
+
+	(function() {
+
+		// PART ONE: CREATE HOTEL OBJECT AND WRITE OUT OFFER DETAILS
+
+		// Create hotel object using object literal syntax 
+		var hotel = {
+			name: 'Park',
+			roomRate: 240,  // Amount in dollars 
+			discount: 15,   // Percentage discount
+			offerPrice: function() {
+				var offerRate = this.roomRate * ((100-this.discount) / 100);
+				return offerRate; 
+			}
+		};
+
+		// Write out hotel name, standard rate, and special rate
+		var hotelName, roomRate, specialRate;		// Declare variables 
+
+		hotelName = document.getElementById('hotelName');	// Get elements 
+		roomRate = document.getElementById('roomRate');
+		specialRate = document.getElementById('specialRate');
+
+
+		hotelName.textContent = hotel.name;   // Write hotel name
+		roomRate.textContent = '$' + hotel.roomRate.toFixed(2);   // Write room rate 
+		specialRate.textContent = '$' + hotel.offerPrice();    // Write offer price 
+
+
+		// PART TWO: CALCULATE AND WRITE OUT EXPIRY DETAILS FOR OFFER
+		var expiryMsg;  // Message displayed to users
+		var today;   // Today's date 
+		var elEnds;  // element that shows message about offer ending 
+
+
+		function offerExpires(today) {
+			// Declare variables w/in function for local scope 
+			var weekFromToday, day, date, month, year, dayNames, monthNames;
+
+			// Add 7 days time (added in milliseconds)
+			weekFromToday = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+			// Create arrays to hold names of days/ months 
+			dayNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+			'July', 'August', 'September', 'October', 'November', 'December'];
+
+			// Collect parts of the date to show on page 
+			day = dayNames[weekFromToday.getDay()];
+
+			date = weekFromToday.getDate();
+
+			month = monthNames[weekFromToday.getMonth()];
+
+			year = weekFromToday.getFullYear();
+
+			//Create the message 
+			expiryMsg = 'Offer expires next '; 
+			expiryMsg += day + '<br/> (' + date + ' ' + month + ' ' + year + ')';
+			return expiryMsg;
+		}
+
+
+		today = new Date();              // Put today's date in variable 
+		elEnds = document.getElementById('offerEnds');     // Get offerEnds element
+		elEnds.innerHTML = offerExpires(today);   //Add expiry message 
+
+		// Finsih immediately invoked function expression..FIX THIS. WHAT WENT WRONG?! 
+
+
+	}()); 
+
+
+	</script>
+
+</body>
+</html>
