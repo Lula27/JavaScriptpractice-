@@ -8,9 +8,15 @@ How long will it take to accomplish those tasks? -->
 </head>
 <body>
 	<h1 style="text-align: center;"><strong>My Planner</strong></h1>
+	<h2 id="month"></h2>
+	<h3 id="time"></h3>
 
 
 	<div id="message"></div>
+
+	<!-- output for various dates -->
+
+	<div id="newday"></div>
 
 
 	<script type="text/javascript">
@@ -19,26 +25,81 @@ How long will it take to accomplish those tasks? -->
 	// Establish date as today
 		var today = new Date(); 
 
-		console.log(today); 
+		//console.log(today); 
 
+	// Print date 
+		var date = today.toDateString();
 
-	// Create variables 
+		var elDate = document.getElementById('month');
 
-		var name = {
-			'Lula',
-			 'Loretta', 
-			 'Abena'}; 
+		elDate.innerHTML = 'Date today: ' + date; 
 
-		console.log(name[0]); 
+	// Print time
+
+		var time = today.toTimeString();
+
+		var elTime = document.getElementById('time'); 
+
+		elTime.innerHTML = time; 
+
+	// Get day number
+		var day = today.getDay();
+
+		// console.log(today);
+
+	// define name 
+		var name = 'Loretta'; 
 
 	
 	// Print date details
 
-		var msg = 'Hello ' + name[2] + ' enjoy your day!';
+		var msg = 'Hello ' + name + ' enjoy your day!';
 
 		var elMsg = document.getElementById('message');
 
 		elMsg.innerHTML = msg; 
+
+
+	// Print information about dates throughout Feb
+
+		// Establish a date 
+		// var sDate = new Date();
+
+		// Set day of month to last day of previous month 
+		// sDate.setDate(0); 
+
+		
+
+		// Store information about various days in Feb
+
+		// Day 1
+		var sDate = new Date();
+
+		sDate += sDate.setDate(1);
+
+		// console.log(sDate); 
+
+
+		// Day 2 
+		var aDate = new Date();
+
+		aDate += aDate.setDate(2);
+
+		// console.log(aDate); 
+
+		// Day 3
+
+		var bDate = new Date();
+
+		bDate += bDate.setDate(3);
+
+		console.log(bDate); 
+
+
+
+
+
+	
 
 
 
