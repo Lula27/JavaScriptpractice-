@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operators</title>
+</head>
+<body>
+	<h1>Using Comparison Operators</h1>
+
+	<!-- Where JS output will appear -->
+	<div id="answer"></div>
+
+	<h2>Comparing Two Expressions</h2>
+
+	<!-- Output -->
+	<div id="anstwo"></div>
+
+	<h3>Using Logical And</h3>
+
+	<!-- Output -->
+	<div id="ansthree"></div>
+
+
+	<h3>Using Logical Or & Logical Not</h3>
+
+	<!-- Output -->
+	<div id="ansfour"></div>
+
+
+	<script type="text/javascript">
+
+		// Comparison Operators: Evaluating Conditions
+
+		// A. == (is equal to: compares two values to see if they are the same)
+
+		// console.log('Hello' == 'Goodbye'); 
+
+		// console.log('1' == 1); 
+
+		// console.log(2 == 'two'); 
+
+
+		// B. === (strict equal to: compares two values to check that both data type and value are same)
+
+		// console.log('Hello' === 'Goodbye');
+
+		// console.log('1' === 1); 
+
+		// console.log( 7 === 7); 
+
+
+		// C. != (is not equal to: compares two values-numbers, strings, or Booleans to see if they are not the same)
+		// console.log('Hello' != 'Goodbye!'); 
+
+		// console.log(1 != 'one'); 
+
+		// console.log(1 != 1); 
+		
+
+		// D. !== (strict not equal to: compares two values to check that both data type and value are not the same)
+
+		// console.log('3' !== 3); 
+
+		// console.log(3 !== 3); 
+
+
+	// Under USing Comparison Operators
+		// Using one expression
+		var pass = 50;
+		var score = 90;
+
+		// Check if user has passed 
+		var hasPassed = score >= pass; 
+
+		// Write message into page 
+		var el = document.getElementById('answer'); 
+		el.textContent = 'Level passed: ' + hasPassed; 
+
+
+	// Under Comparing Two Expressions
+		var score1 = 90;		// Round 1 score
+		var score2 = 95;		// Round 2 score
+		var highScore1 = 75;	// Round 1 high score
+		var highScore2 = 95;    // Round 2 high score 
+
+		// Check if scores are higher than current high scores
+		var comparison = (score1 + score2) > (highScore1 + highScore2); 
+
+		// Write message onto page
+		var elText = document.getElementById('anstwo');
+
+		elText.textContent = 'New high score: ' + comparison; 
+
+		// Logical Operators
+
+		// && (Logical And: tests more than one condition)
+			// console.log((5 < 2) && (2 >= 3)); 
+
+
+		// || (Logical Or: tests at least one condition)
+			// console.log((5 < 2) || (2 >= 3)); 
+
+		// ! (Logical Not: takes single Boolean value and inversts it)
+			// console.log(!(2 < 1)); 
+
+		// Using Logical And (output under ansthree div)
+		var score3 = 8;   // Round 1 score
+		var score4 = 8;   // Round 2 score
+		var pass1 = 6;    // Round 1 pass mark
+		var pass2 = 6;    // Round 2 pass mark 
+
+
+		// Check whether user passed both rounds, store result in a variable 
+		var check = (score3 >= pass1) && (score4 >= pass2);
+
+		// Create message 
+		var msg = 'Both rounds passed: ' + check; 
+
+		var elShow = document.getElementById('ansthree');
+
+		elShow.textContent = msg; 
+
+
+		// Using Logical or & Logical Not 
+		var score5 = 8;      //	Round 1 score
+		var score6 = 8;      //	Round 2 score
+		var pass3 = 6;       //	Round 1 pass mark
+		var pass4 = 6; 		//	Round 2 pass mark
+
+
+	  // Check whether user passed one of the two rounds, store result in variable (going to be either or ||)
+	  var yesPass = ((score5 >= pass3) || (score6 >= pass4));
+
+	  // console.log(yesPass); 
+
+	  // create message - resit = to retake a test 
+	  var msg = 'Resit required: ' + !yesPass;  
+
+	  // Print on page
+	  var elPrint = document.getElementById('ansfour'); 
+
+	  elPrint.textContent = msg; 
+
+
+ 		
+	</script>
+</body>
+</html>
