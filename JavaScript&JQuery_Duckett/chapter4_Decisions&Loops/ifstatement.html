@@ -16,6 +16,10 @@
 
 	<div id="ansthree"></div>
 
+	<h2>Using Switch Statements</h2>
+
+	<div id="ansfour"></div>
+
 	<script type="text/javascript">
 		
 		// Code 1 
@@ -63,6 +67,35 @@
 		el.textContent = msg; 
 
 
+
+
+		// Using Switch Statements - starts with a variable calld switch value; 
+		// Each case indicates a possible value for this variable and the code that should run if the variable matches that value
+
+		var msg;	// Message
+		var level = 2;  // Level
+
+		// Determine message based on level
+		switch (level) {
+		case 1: 
+			msg = 'Good luck on the first test';
+			break; 
+
+		case 2:
+			msg = 'Second of three - keep going!';
+			break;
+
+		case 3:
+			msg = 'Final round, almost there!';
+			break;
+
+		default:
+			msg = 'Good luck!';
+			break;
+		}  
+
+		var el = document.getElementById('ansfour');
+		el.textContent = msg; 
 	</script>
 
 </body>
