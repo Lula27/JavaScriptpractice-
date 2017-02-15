@@ -12,6 +12,10 @@
 
 	<div id="answer2"></div>
 
+	<h2>Using If...Else Statements</h2>
+
+	<div id="ansthree"></div>
+
 	<script type="text/javascript">
 		
 		// Code 1 
@@ -40,6 +44,24 @@
 		}
 		var el = document.getElementById('answer2');
 		el.innerHTML = msg; 
+
+
+		// Using If...Else Statements
+
+		var pass = 50;		// Pass mark
+		var score = 75;		// Current score
+		var msg;			// Message
+
+		// Select message to write based on score
+		if (score >= pass) {
+			msg = 'Congratulations, you passed!';
+		} else {
+			msg = 'Have another go!';
+		}
+
+		var el = document.getElementById('ansthree');
+		el.textContent = msg; 
+
 
 	</script>
 
