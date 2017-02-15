@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If Statements</title>
+</head>
+<body>
+
+	<h1>Using If Statements</h1>
+
+	<!-- Output for js script-->
+	<div id="answer"></div>
+
+	<div id="answer2"></div>
+
+	<script type="text/javascript">
+		
+		// Code 1 
+		var score = 75; 	// Score
+		var msg; 			// Message
+
+		if (score >= 50) {	// If score is 50 or higher 
+			msg = 'Congratulations!';
+			msg += ' Proceed to the next round.';
+		}
+		var el = document.getElementById('answer');
+		el.textContent = msg; 
+
+
+		// Code 2 - same outcome, different code 
+		var score = 75;		// Score
+		var msg = '';		// Message
+
+		function congratulate() {
+			msg += 'Congratulations! ';
+		}
+
+		if (score >= 50) {	// If score is 50 or more
+			congratulate();
+			msg += 'Proceed to the next round.';
+		}
+		var el = document.getElementById('answer2');
+		el.innerHTML = msg; 
+
+	</script>
+
+</body>
+</html>
