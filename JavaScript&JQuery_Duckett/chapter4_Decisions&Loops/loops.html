@@ -8,6 +8,12 @@
 	<h1>Using For Loops</h1>
 	<div id="answer"></div>
 
+	<h2>Using While Loops</h2>
+	<div id="anstwo"></div>
+
+	<h2>Using Do While Loops</h2>
+	<div id="ansthree"></div>
+
 	<script type="text/javascript">
 		
 		var scores = [24, 32, 17];	// Array of scores
@@ -32,6 +38,37 @@
 		}
 
 		document.getElementById('answer').innerHTML = msg; 
+
+
+		// Using While Loops
+		var i = 1;			// Set counter to 1 
+		var msg = '';		// Message 
+
+		// Store 5 times table in a variable 
+		while (i < 10) {
+			msg += i + ' x 5 = ' + (i * 5) + '<br />';
+			i++; 
+		} while (i < 1);
+		// Note how this is already 1 and it still runs...
+
+		// chained something you previously broke into two steps into one simple piece of code. 
+		document.getElementById('anstwo').innerHTML = msg; 
+
+
+
+		// Using Do While Loops
+		var i = 1; 
+		var msg = '';
+
+		// Store 5 times table in a variable 
+		do {
+			msg += i + ' x 5 = '  + (i * 5) + '<br/>'; 
+			i++;
+		} while (i < 1);
+		// Note how this is already 1 and it still runs...
+		document.getElementById('ansthree').innerHTML = msg; 
+
+
 	</script>
 
 </body>
