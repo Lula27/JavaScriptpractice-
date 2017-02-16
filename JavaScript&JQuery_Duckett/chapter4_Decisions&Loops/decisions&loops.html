@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Decisions & Loops</title>
+	</head>
+	<body>
+		<section id="page2">
+			<h1>Bullseye</h1>
+			<section id="blackboard"></section>
+		</section>
+		<script type="text/javascript">
+			
+		var table = 3; 
+		var operator = 'auditon';
+		var i = 1; 
+		var msg = '';
+
+		if (operator === 'addition') {
+			while (i < 11) {
+				msg += i + ' + ' + table + ' = ' + (i + table) + '<br/>'; 
+				i++;
+			}
+		} else {
+			while (i < 11) {
+				msg += i + ' x ' + table + ' = ' + (i * table) + '<br />'; 
+				i++;
+			}
+		}
+
+		// Write the message into the page 
+		var el = document.getElementById('blackboard');
+		el.innerHTML = msg; 
+
+
+		</script>
+	</body>
+</html>
