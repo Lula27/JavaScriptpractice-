@@ -7,6 +7,8 @@
 		<h1>Using Comaprison Operators</h1>
 		<div id="comp"></div>
 		<div id="age"></div>
+		<div id="diff"></div>
+		<div id="greater"></div>
 
 		<script type="text/javascript">
 			// Using Comparison Operators 
@@ -25,7 +27,7 @@
 			el.innerHTML = msg; 
 
 
-			// Greater than or equal to + != to
+			// Strictly equal to and != to
 
 			var myAge = 25; 
 			var sisterAge = 23;
@@ -48,6 +50,21 @@
 			el.innerHTML =  msg; 
 
 			rebuttal += 'Ok...so are our ages different?' + '<br> Response: ' + ageDiff; 
+
+			el = document.getElementById('diff');
+			el.innerHTML = rebuttal; 
+
+
+			// Greater than or equal to 
+
+			var older = sisterAge >= myAge;
+
+			var lastQuestion = '';
+
+			lastQuestion += 'Alright Genie, this is the last thing I would like to know. Is my sister older than me? ' + '<br> Response: ' + older;
+
+			var el = document.getElementById('greater');
+			el.innerHTML = lastQuestion; 
 
 
 
