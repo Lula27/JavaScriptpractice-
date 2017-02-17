@@ -6,6 +6,7 @@
 	<body>
 		<h1>Using Comaprison Operators</h1>
 		<div id="comp"></div>
+		<div id="age"></div>
 
 		<script type="text/javascript">
 			// Using Comparison Operators 
@@ -14,14 +15,39 @@
 
 			var msg = ''; 
 
-			// console.log(score >= pass); 
-			var outcome = score >= pass; 
+			// console.log(score > pass); --> strictly greaer than 
+			var outcome = score > pass; 
 
 			msg += 'Hurrah! Did I pass or nah? ' + 'Survay says:...' + outcome; 
 
 			el = document.getElementById('comp')
 
 			el.innerHTML = msg; 
+
+
+			// Greater than or equal to + != to
+
+			var myAge = 25; 
+			var sisterAge = 23;
+
+			var msg = '';
+
+			var rebuttal = ''; 
+
+			var ageSame = myAge === sisterAge;
+
+			// console.log(ageSame); 
+
+			var ageDiff = myAge != sisterAge;
+
+			// console.log(ageDiff);
+
+			msg += 'Genie, is my sister my twin? ' + '<br>Response: ' + ageSame; 
+
+			el = document.getElementById('age');
+			el.innerHTML =  msg; 
+
+			rebuttal += 'Ok...so are our ages different?' + '<br> Response: ' + ageDiff; 
 
 
 
