@@ -37,6 +37,14 @@
 
 			<div id="twice"></div>
 
+				<br>
+
+			<div id="thrice"></div>
+
+				<br>
+
+			<div id="cuatro"></div>
+
 
 		<script type="text/javascript">
 			// Using Comparison Operators 
@@ -123,7 +131,25 @@
 			document.getElementById('twice').innerHTML = question; 
 
 
+			var check = (wk1Wage1 <= wk1Wage2) && (wk2Wage3 >= wk2Wage4);
 
+			// console.log(check); 
+
+			var inquery = '';
+
+			inquery += "Is my logic correct? <br> Answer: " + check; 
+
+			document.getElementById('thrice').innerHTML = inquery; 
+
+			
+			// Either or! 
+			var check2 = (wk1Wage1 <= wk1Wage2) || (wk2Wage3 >= wk2Wage4);
+
+			// console.log(check2); 
+
+			askAgain = "Is my logic right now? <br> Answer: " + check2; 
+
+			document.getElementById('cuatro').innerHTML =askAgain;   
 
 
 
