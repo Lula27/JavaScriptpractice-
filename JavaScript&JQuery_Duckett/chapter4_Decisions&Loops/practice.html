@@ -11,7 +11,6 @@
 		<div id="greater"></div>
 
 		<h2>Using Two Comparison Operators</h2>
-		<div id="twice"></div>
 
 			<table style="width: 50%">
 				<tr>
@@ -35,6 +34,8 @@
 					<td id="four" align="center"></td>
 				</tr>
 			</table>
+
+			<div id="twice"></div>
 
 
 		<script type="text/javascript">
@@ -105,8 +106,21 @@
 
 			// console.log(compare); 
 
+			// Populate onto table
+			document.getElementById('one').innerHTML = '$ '+ wk1Wage1; 
+
+			document.getElementById('two').innerHTML = '$ ' + wk1Wage2; 
+
+			document.getElementById('three').innerHTML = '$ ' + wk2Wage3;
+
+			document.getElementById('four').innerHTML = '$ ' + wk2Wage4; 
 
 
+			var question = '';
+
+			question += "Hi, HR Clinton! Were my wages higher during week one? <br> Response: " + compare; 
+
+			document.getElementById('twice').innerHTML = question; 
 
 
 
