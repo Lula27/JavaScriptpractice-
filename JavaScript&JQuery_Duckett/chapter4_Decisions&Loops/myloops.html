@@ -6,20 +6,34 @@
 	<body>
 
 		<h1>Practicing Loops!</h1>
-		<h2>Count to Three</h2>
+		<h2>Example 1</h2>
 		<div id="forloops"></div>
 	
 	<script type="text/javascript">
 
-		var i = 1.5; 
+		// Model - create variables 
+		var scores = [70, 55, 98];
+		var length = scores.length; 
+		var roundNumber = 0; 
+		var msg = '';
+		var i; 
 
-		for (var i = 0; i < i.length; i++) {
-			var newnum = 2
 
-			var sum = i + newnum; 
+		// Loop through items in array 
+		for (i = 0; i < length; i++) {
+
+			// Add 1 to current round
+			roundNumber = (i + 0);
+
+			// Write current round to message
+			msg += 'Round ' + roundNumber + ': ';
+
+			// Get score from scores array 
+			msg += scores[i] + '<br/>';
 		}
-		
-	document.getElementById('forloops').innerHTML = sum; 
+
+		document.getElementById('forloops').innerHTML = msg; 
+
 
 
 	</script>
