@@ -10,6 +10,9 @@
 		<h2>Example 1</h2>
 		<div id="ex1"></div>
 		<div id="add"></div>
+
+		<h3>While Loop Example</h3>
+		<div id="while"></div>
 		
 	
 	<script type="text/javascript">
@@ -51,11 +54,23 @@
 				var message = count[i] + add + '<br/>';
 			}
 
-		
 
 		document.getElementById('ex1').innerHTML = list; 
 
 		document.getElementById('add').innerHTML = message; 
+
+
+		// Practice 2: While Loops
+		var i = 1;     // Set counter to 1
+		var msg1 = ''; 
+
+		// Store 5 times table in a variable 
+		while (i < 10) {
+			msg1 += i + ' x 5 = ' + (i * 5) + '<br />';
+			i++;
+		} while (i < 1); 
+
+		document.getElementById('while').innerHTML = msg1; 
 
 
 
