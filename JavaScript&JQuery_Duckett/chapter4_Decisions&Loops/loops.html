@@ -52,7 +52,7 @@
 		var msg = '';		// Message 
 
 		// Store 5 times table in a variable 
-		while (i < 10) {
+		while (i <= 10) {
 			msg += i + ' x 5 = ' + (i * 5) + '<br />';
 			i++; 
 		} while (i < 1);
@@ -68,12 +68,12 @@
 
 		// Store 6x table in variable 
 
-		while (i < 10) {
+		while (i <= 10) {
 			msgsx += i + ' x 6 = ' + (i * 6) + '<br />';
 			i++;
 		} while (i < 1);
 
-		document.getElementById('six'); 
+		document.getElementById('six').innerHTML = msgsx; 
 
 
 
@@ -83,7 +83,7 @@
 		var mymsg = ''; 
 
 		// Store 7 times in a a variable 
-		while (i < 10) {
+		while (i <= 10) {
 			mymsg += i + ' x 7 = ' + (i * 7) + '<br />';
 			i++;
 		} while (i < 1); 
