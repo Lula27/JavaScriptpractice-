@@ -8,11 +8,18 @@
 	<h1>Using For Loops</h1>
 	<div id="answer"></div>
 
-	<h2>Using While Loops</h2>
+	<h2>5x Table</h2>
 	<div id="anstwo"></div>
+
+	<h2>6x Table</h2>
+	<div id="six"></div>
+
+	<h2>7x Table</h2>
+	<div id="seven"></div>
 
 	<h2>Using Do While Loops</h2>
 	<div id="ansthree"></div>
+	
 
 	<script type="text/javascript">
 		
@@ -55,6 +62,39 @@
 		document.getElementById('anstwo').innerHTML = msg; 
 
 
+		// With 6x table 
+		var i = 1; 
+		var msgsx = '';
+
+		// Store 6x table in variable 
+
+		while (i < 10) {
+			msgsx += i + ' x 6 = ' + (i * 6) + '<br />';
+			i++;
+		} while (i < 1);
+
+		document.getElementById('six'); 
+
+
+
+
+
+		var i = 1; 
+		var mymsg = ''; 
+
+		// Store 7 times in a a variable 
+		while (i < 10) {
+			mymsg += i + ' x 7 = ' + (i * 7) + '<br />';
+			i++;
+		} while (i < 1); 
+
+		document.getElementById('seven').innerHTML = mymsg; 
+
+
+
+		// Practice with do while loops
+
+		
 
 		// Using Do While Loops
 		var i = 1; 
@@ -67,6 +107,12 @@
 		} while (i < 1);
 		// Note how this is already 1 and it still runs...
 		document.getElementById('ansthree').innerHTML = msg; 
+
+
+		
+
+
+
 
 
 	</script>
