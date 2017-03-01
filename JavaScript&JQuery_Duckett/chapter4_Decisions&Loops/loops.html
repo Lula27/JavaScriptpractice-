@@ -8,6 +8,12 @@
 	<h1>Using For Loops</h1>
 	<div id="answer"></div>
 
+	<h2>1x Table</h2>
+	<div id="one"></div>
+
+	<h2>2x Table</h2>
+	<div id="two"></div>
+
 	<h2>5x Table</h2>
 	<div id="anstwo"></div>
 
@@ -47,6 +53,31 @@
 		document.getElementById('answer').innerHTML = msg; 
 
 
+		// 1 Times Table
+
+		var i = 1; 
+		var msgone = ''; 
+
+		while (i <= 10) {
+			msgone += i + ' x 1 = ' + (i * 1) + '<br />';
+			i++; 
+		} while (i < 1); 
+
+		document.getElementById('one').innerHTML = msgone; 
+
+
+		// 2 Times Table 
+
+		var i = 1; 
+		var msgtwo = '';
+
+		while (i <= 10) {
+			msgtwo += i + 'x 2 = ' + (i * 2) + '<br />';
+			i++;
+		} while (i < 1); 
+
+		document.getElementById('two').innerHTML = msgtwo; 
+
 		// Using While Loops
 		var i = 1;			// Set counter to 1 
 		var msg = '';		// Message 
@@ -60,6 +91,7 @@
 
 		// chained something you previously broke into two steps into one simple piece of code. 
 		document.getElementById('anstwo').innerHTML = msg; 
+
 
 
 		// With 6x table 
@@ -77,8 +109,7 @@
 
 
 
-
-
+		// 7x table 
 		var i = 1; 
 		var mymsg = ''; 
 
