@@ -29,6 +29,15 @@
 	<h2>7x Table</h2>
 	<div id="seven"></div>
 
+	<h2>8x Table</h2>
+	<div id="eight"></div>
+
+	<h2>9x Table</h2>
+	<div id="nine"></div>
+
+	<h2>10x Table</h2>
+	<div id="ten"></div>
+
 	<h2>Using Do While Loops</h2>
 	<div id="ansthree"></div>
 	
@@ -119,7 +128,7 @@
 
 		var i = 1; 
 		var msgfive = '';
-		
+
 		while (i <= 10) {
 			msgfive += i + ' x 5 = ' + (i * 5) + '<br />';
 			i++; 
@@ -128,7 +137,6 @@
 
 		// chained something you previously broke into two steps into one simple piece of code. 
 		document.getElementById('five').innerHTML = msgfive; 
-
 
 
 		// With 6x table 
@@ -145,7 +153,6 @@
 		document.getElementById('six').innerHTML = msgsx; 
 
 
-
 		// 7x table 
 		var i = 1; 
 		var mymsg = ''; 
@@ -157,6 +164,30 @@
 		} while (i < 1); 
 
 		document.getElementById('seven').innerHTML = mymsg; 
+
+
+		// 8x Table
+		var i = 1; 
+		var msgeight = '';
+
+		while (i <= 10) {
+			msgeight += i + ' x 8 =' + (i * 8) + '<br />'; 
+			i++; 
+		} while (i < 1); 
+
+		document.getElementById('eight').innerHTML = msgeight; 
+
+		// 9 Times Table 
+		var i = 0;
+		var msgnine = '';
+
+		while (i <= 10) {
+		 msgnine += i + ' x 9  = ' + (i * 9) +'<br/ >'
+		 i++; 
+		} while (i = 0); 
+
+		document.getElementById('nine').innerHTML = msgnine; 
+
 
 
 
