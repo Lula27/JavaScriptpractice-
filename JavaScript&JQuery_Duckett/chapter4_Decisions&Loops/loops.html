@@ -226,12 +226,12 @@
 		var i = 0; 
 		var msgcount = '';
 
-		while (i >= 10) {
+		while (i <= 10) {
 			msgcount += i + '<br />'; 
 			i++; 
-		}
+		} while (i = 0); 
 
-
+		console.log(msgcount); 
 		document.getElementById('count').innerHTML = msgcount; 
 
 
