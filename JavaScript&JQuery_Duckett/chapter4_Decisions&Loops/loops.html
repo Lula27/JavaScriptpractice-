@@ -43,6 +43,9 @@
 
 	<h2>Count to Ten!</h2>
 	<div id="count"></div>
+
+	<h2>Count to Hundred!</h2>
+	<div id="cien"></div>
 	
 
 	<script type="text/javascript">
@@ -233,6 +236,20 @@
 
 		console.log(msgcount); 
 		document.getElementById('count').innerHTML = msgcount; 
+
+
+		// Count from 1 to 100
+
+		var i = 0; 
+		var msgcien = ''; 
+
+		while (i <= 100) {
+			msgcien += i;   
+			i++; 
+		} 
+
+		document.getElementById('cien').innerHTML = msgcien; 
+
 
 
 
