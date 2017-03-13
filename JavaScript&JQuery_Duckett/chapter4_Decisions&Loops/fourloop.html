@@ -25,7 +25,6 @@
 
 	var msg = "Aboa me pe paa ye "; 
 
-	var count = i + '<br/>'; 
 
 
 	// FOR LOOP SYNTAX
@@ -50,9 +49,15 @@
 	}
 
 
+	// Eek...stuck. How can I create a simple count that counts to 10 on each line? 
+
 	for (i=0; i<10; i++) {
-		i++;
-		document.getElementById('counter').innerHTML = count; 
+
+		var count = 0;
+
+		count += i++; 
+		
+		document.getElementById('counter').innerHTML = 'Number: ' + count + '<br/>';
 	}
 
 
