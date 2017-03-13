@@ -13,6 +13,9 @@
 		<h2>Replica</h2>
 		<div id="myAnimals"></div>
 
+		<h3>Count to 10!</h3>
+		<div id="counter"></div>
+
 	
 	<script type="text/javascript">
 
@@ -21,6 +24,8 @@
 	var i = 0; 
 
 	var msg = "Aboa me pe paa ye "; 
+
+	var count = i + '<br/>'; 
 
 
 	// FOR LOOP SYNTAX
@@ -45,6 +50,10 @@
 	}
 
 
+	for (i=0; i<10; i++) {
+		i++;
+		document.getElementById('counter').innerHTML = count; 
+	}
 
 
 	</script>
