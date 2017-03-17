@@ -10,7 +10,8 @@
 		<h2>Before For-Loop</h2>
 			<div id="preloop"></div>
 		<h3>After For-Loop</h3>
-			<div id="forloop"></div>
+			<div id="forloop1"></div>
+			<div id="forloop2"></div>
 		<h2>B.  For/in - loop sthrough the properties of an object</h2>
 		<h2>C.  While- loop sthrough a block of code while a specified condition is true</h2>
 		<h2>D. Do/while - alos loops through a clock of code while a specified condition is true</h2>
@@ -42,9 +43,25 @@
 				text += cars[i] + '<br>';  
 			}
 			
-			document.getElementById('forloop').innerHTML = text; 
+			document.getElementById('forloop1').innerHTML = text; 
 			// document.getElementById('forloop') = text;
 
+
+			// Practice 2
+
+			var alp1 = 'A';
+			var alp2 = 'B';
+			var alp3 = 'C'; 
+
+			var txt = ''; 
+
+			// Print out ABC 
+
+			for (i = 0; i < 3; i++) {
+				txt += alp1 + '<br>' + alp2 + '<br>' + alp3 + '<br>';
+			}
+
+			document.getElementById('forloop2').innerHTML = txt; 
 		</script>
 	</body>
 
