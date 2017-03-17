@@ -34,7 +34,17 @@
 			text += cars[5] + '<br>'; 
 
 			document.getElementById('preloop').innerHTML = text; 
+
+			// Make into for loop...
+
+			for (i = 0; i < cars.length; i++) {
+				text = ''; 
+				text += cars[i] + '<br>';  
+			}
 			
+			document.getElementById('forloop').innerHTML = text; 
+			// document.getElementById('forloop') = text;
+
 		</script>
 	</body>
 
