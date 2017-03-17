@@ -7,6 +7,9 @@
 	<body>
 		<h1>Different Kinds of Loops</h1>
 		<h2>A.  For-loops through a block of code a number of times</h2>
+		<h2>Before For-Loop</h2>
+			<div id="preloop"></div>
+		<h3>After For-Loop</h3>
 			<div id="forloop"></div>
 		<h2>B.  For/in - loop sthrough the properties of an object</h2>
 		<h2>C.  While- loop sthrough a block of code while a specified condition is true</h2>
@@ -24,8 +27,13 @@
 			// console.log(cars); 
 			// Write series of statements
 			text += cars[0] + '<br>'; 
+			text += cars[1] + '<br>'; 
+			text += cars[2] + '<br>'; 
+			text += cars[3] + '<br>'; 
+			text += cars[4] + '<br>'; 
+			text += cars[5] + '<br>'; 
 
-			console.log(text); 
+			document.getElementById('preloop').innerHTML = text; 
 			
 		</script>
 	</body>
