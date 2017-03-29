@@ -33,7 +33,15 @@
 			var firstItem = elements[0]; 
 		}
 
+		// Selecting Elements Using Class Attributes
+		var elements = document.getElementByClassName('hot');  // Find hot items
 
+		if (elements.length > 2) {		// If 3 or more are found 
+
+			var el = elements[2];		// Select third one from NodeList
+			el.className = 'cool';  	// Change value of its class attribute 
+
+		}
 
 
 	</script>
