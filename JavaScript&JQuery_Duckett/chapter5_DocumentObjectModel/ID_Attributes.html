@@ -15,10 +15,18 @@
 
 	<script type="text/javascript">
 		// Select the element and store it in a variable.
-		var el = document.getElementById('one');
+		// var el = document.getElementById('one');
 
 		// Change the value of the class attribute.
-		el.className = 'cool'; 
+		// el.className = 'cool'; 
+
+		// Selecting an element from a nodelist
+		var elements = document.getElementByClassName('hot')
+		if (elements.length >= 1) {
+			var firstItem = elements.items(0); 
+		}
+
+
 
 	</script>
 	</body>
