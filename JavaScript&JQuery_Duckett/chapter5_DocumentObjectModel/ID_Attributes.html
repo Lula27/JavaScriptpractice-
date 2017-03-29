@@ -20,11 +20,19 @@
 		// Change the value of the class attribute.
 		// el.className = 'cool'; 
 
-		// Selecting an element from a nodelist
+		// A. Selecting an element from a nodelist
 		var elements = document.getElementByClassName('hot')
 		if (elements.length >= 1) {
 			var firstItem = elements.items(0); 
 		}
+
+
+		// Array syntax-square brakets: Faster way of doing A
+		var elements = document.getElementByClassName('hot');
+		if (elements.length >= 1) {
+			var firstItem = elements[0]; 
+		}
+
 
 
 
