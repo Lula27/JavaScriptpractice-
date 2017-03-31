@@ -21,29 +21,36 @@
 		// el.className = 'cool'; 
 
 		// A. Selecting an element from a nodelist
-		var elements = document.getElementByClassName('hot')
-		if (elements.length >= 1) {
-			var firstItem = elements.items(0); 
+		// var elements = document.getElementByClassName('hot')
+		// if (elements.length >= 1) {
+		// 	var firstItem = elements.items(0); 
+		// }
+
+
+		// // Array syntax-square brakets: Faster way of doing A
+		// var elements = document.getElementByClassName('hot');
+		// if (elements.length >= 1) {
+		// 	var firstItem = elements[0]; 
+		// }
+
+		// // Selecting Elements Using Class Attributes
+		// var elements = document.getElementByClassName('hot');  // Find hot items
+
+		// if (elements.length > 2) {		// If 3 or more are found 
+
+		// 	var el = elements[2];		// Select third one from NodeList
+		// 	el.className = 'cool';  	// Change value of its class attribute 
+
+		// }
+
+		// Selecting Elements by Tag Name 
+		var elements = document.getElementByTagName('li'); // Find <li> elements
+
+		if (elements.length > 0) {
+
+			var el = elements[0];	// Select the first one using array syntax
+			el.className = 'cool'	// Change value of class attribute 
 		}
-
-
-		// Array syntax-square brakets: Faster way of doing A
-		var elements = document.getElementByClassName('hot');
-		if (elements.length >= 1) {
-			var firstItem = elements[0]; 
-		}
-
-		// Selecting Elements Using Class Attributes
-		var elements = document.getElementByClassName('hot');  // Find hot items
-
-		if (elements.length > 2) {		// If 3 or more are found 
-
-			var el = elements[2];		// Select third one from NodeList
-			el.className = 'cool';  	// Change value of its class attribute 
-
-		}
-
-		// Left off on page 200! 
 
 
 	</script>
