@@ -10,6 +10,13 @@
 			<li id="three" class="hot">honey</li>
 			<li id="four">balsamic vinegar</li>
 		</ul>
-
 	</body>
+	<script type="text/javascript">
+		// Select starting point and find its children
+		var startItem = document.getElementsByTagName('ul')[0];
+		console.log(startItem); 
+		var firstItem = startItem.firstChild; 
+
+		console.log(firstItem);
+	</script>
 </html>
